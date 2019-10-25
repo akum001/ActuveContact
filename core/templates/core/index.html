@@ -1,0 +1,159 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'core/custom.css' %}">
+<style media="screen">
+  *{
+    margin:0;
+    padding:0;
+  }
+  .card-header{
+    background-color: rgb(137, 208, 199);
+  }
+  .list-group-item{
+    padding: 2rem 2rem;
+  }
+  body{
+    margin:0;
+    font-family: Arial, "Helvetica Neue",
+    Helvetica, sans-serif;
+    font-size:17px;
+    color: #926239;
+    line-height:1.6;
+  }
+
+  #more {display: none;}
+
+
+  #showcase{
+  background-image: url('static/core/images/background.jpg');
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+
+  }
+
+  #mylink{
+    color: #007bff !important;
+    text-decoration: none important;
+    background-color: transparent !important;
+}
+
+  /* .jumbotron {
+    background-color: #527277;
+} */
+
+</style>
+{% endblock %}
+
+
+{% block body %}
+
+<!-- <div class="card">
+  <div class="card-header">Hey! We are super excited to have you...</div>
+</div>
+<br>
+<div class="jumbotron">
+  <li>
+      <ul>
+        <h5>Reach to your right prospectus with Active Contacts Information.</h5>
+      </ul>
+      <ul>
+        <h5>We help businesses to grow by enabling to identify and connect with new customers.</h5>
+      </ul>
+  </li>
+
+</div> -->
+
+<!-- <div class="container"> -->
+
+    <div id="showcase">
+      <div style="background:transparent !important" class="jumbotron">
+        <h1>Welcome To The Active Contacts</h1>
+
+      <p>
+        Reach to your right prospectus with Active Contacts Information.
+        We help businesses to grow by enabling to identify and connect with new customers.
+        <span id="dots">...</span><span id="more">
+        Active Contacts is highly dedicated, in order to provide a better service.
+        Choose your database according to the requirement.
+        You will find our services reliable and can believe on the services through
+        the dedicated solutions of our team.
+      </span></p>
+      <a onclick=myFunction() id="mylink">Read more</a>
+      </div>
+      </div>
+    <!-- <div class = "row">
+      <div class="jumbotron">
+      <div class="col-sm-12">
+        <div class="card mt-3" >
+          <div class="card-header">
+
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              Reach to your right prospectus with Active Contacts Information.
+              We help businesses to grow by enabling to identify and connect with new customers.
+            </li>
+          </ul>
+          <div class="card-header">
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="jumbotron">
+      <div class="col-sm-12">
+        <div class="card mt-3" >
+          <div class="card-header">
+
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              Active Contacts is highly dedicated, in order to provide a better service.
+              Choose your database according to the requirement.
+              You will find our services reliable and can believe on the services through
+              the dedicated solutions of our team.
+            </li>
+          </ul>
+          <div class="card-header">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div> -->
+<!-- </div> -->
+
+<!-- <div class="jumbotron">
+  <h5>
+    Active Contacts is highly dedicated, in order to provide a better service.<br>
+    Choose your database according to the requirement.<br>
+    You will find our services reliable and can believe on the services through the dedicated solutions of our team.
+  </h5>
+</div> -->
+
+  <script type="text/javascript">
+    function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("mylink");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+  </script>
+
+{% endblock %}
